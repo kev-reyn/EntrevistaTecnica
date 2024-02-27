@@ -6,13 +6,13 @@ public class CounterServiceImpl implements ContadorService {
     int segundos = 0;
     @Override
     public void counter(int time) {
-        for(this.segundos = 0; segundos<60; segundos++){
+        for(this.segundos = 60; segundos>0; segundos--){
             segundoPasado();
             if (segundos<10){
             System.out.print("00:0"+segundos+"  ");}
             if (segundos>=10){
                 System.out.print("00:"+segundos+"  ");}
-            if (segundos==59){
+            if (segundos==0){
                 kill();
             }
         }
